@@ -25,5 +25,5 @@ jobs:
           response=$(curl --silent --show-error \
             --header "Accept: application/vnd.github+json" \
             --header "Authorization: Bearer $GH_TOKEN" \
-            "https://api.github.com/repos/marselgalleev-star/marselgaleev-site/pages/deployments/14a150e9bb366ae1cdf139f8b2f5bab108ee37d9")
+            "https://api.github.com/repos/marselgalleev-star/marselgaleev-site/pages/deployments/14a150e9bb366ae1cdf139f8b2f5bab108ee37d9" | jq -c .)
           echo "::notice title=Pages deployment status::$response"
